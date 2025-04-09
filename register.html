@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register - Sharewell</title>
+  <link rel="icon" href="/images/share.png" />
+  <link rel="stylesheet" href="register.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1 class="logo" data-value="SHAREWELL">SHAREWELL</h1>
+
+  <div class="register-box">
+    <h2>Register</h2>
+    <form>
+      <div class="input-wrapper">
+        <input type="text" required placeholder=" " id="fullName">
+        <label for="fullName">Full Name</label>
+      </div>
+
+      <div class="input-wrapper">
+        <input type="email" required placeholder=" " id="email">
+        <label for="email">Email</label>
+      </div>
+
+      <div class="input-wrapper">
+        <input type="text" required placeholder=" " id="username">
+        <label for="username">Username</label>
+      </div>
+
+      <div class="input-wrapper">
+        <input type="password" required placeholder=" " id="password">
+        <label for="password">Password</label>
+      </div>
+
+      <button type="submit" class="fontfamily">Create Account</button>
+    </form>
+
+    <a href="home.html" class="home-link">← Back to Home</a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script type="module" src="/ghod/js/auth.js"></script>
+</body>
+</html>

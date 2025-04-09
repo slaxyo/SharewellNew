@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0a0a0a;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.sharewell-title {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.form-box {
+  background-color: #121212;
+  padding: 40px;
+  border-radius: 16px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin: 12px 0 4px;
+  font-weight: 600;
+}
+
+form input {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: #1e1e1e;
+  color: white;
+}
+
+form button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #ffffff;
+  color: black;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+form button:hover {
+  background-color: #dddddd;
+}
+
+.form-link {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: #aaa;
+  text-decoration: none;
+}
+
+.form-link:hover {
+  text-decoration: underline;
+}

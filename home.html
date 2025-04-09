@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sharewell</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="responsive.css">
+  </head>
+  <body>
+    <header id="main-header">
+      <!-- Floating tabs lives directly in header -->
+      <div class="tabs-wrapper" id="floating-tabs">
+        <input type="radio" id="tab-home" name="tabs" checked>
+       <label class="tab active" for="tab-home" data-target="#hero">Home</label>
+    
+        <input type="radio" id="tab-features" name="tabs">
+          <label class="tab" for="tab-features" data-target="#features">Features</label>
+    
+        <input type="radio" id="tab-pricing" name="tabs">
+          <label class="tab" for="tab-pricing" data-target="#pricing">Pricing</label>
+    
+        <input type="radio" id="tab-about" name="tabs">
+         <label class="tab" for="tab-about" data-target="#about">About</label>
+    
+        <input type="radio" id="tab-contact" name="tabs">
+          <label class="tab" for="tab-contact" data-target="#contact">Contact</label>
+    
+        <span class="glider"></span>
+      </div>
+    
+      <!-- This fades on scroll -->
+      <div class="navbar-container">
+        <a href="#" class="logo">SHAREWELL</a>
+        <a href="/ghod/login.html" class="btn btn-secondary" id="login-button">Login</a>
+        <a href="/ghod/profile/dashboard.html" class="btn btn-secondary" id="profile-button" style="display: none;">Profile</a>        
+      </div>
+    </header>
+      
+    
+    
+    <main class="hero">
+      <h1>Give Back To Your Community</h1>
+      <p>A platform that connects people who want to help with those in need.</p>
+      <div class="cta-buttons">
+        <button class="btn btn-primary">Get Started</button>
+        <button class="btn btn-secondary">Learn More</button>
+      </div>
+    </main>
+
+    <div class="loader-wrapper">
+      <div class="card loader-card">
+        <div class="loader">
+          <p>Helping</p>
+          <div class="words">
+            <div class="word-list">
+              <span>Families</span>
+              <span>Locally</span>
+              <span>Orphans</span>
+              <span>Needy</span>
+              <span>Communities</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="feature-scroll">
+      <h2 class="feature-heading">Explore What We Offer</h2>
+      <div class="feature-scroll-wrapper">
+        <button class="scroll-btn left" aria-label="Scroll left">&#10094;</button>
+    
+        <div class="feature-cards" id="featureCards">
+          <div class="feature-card" style="background-image: url('https://shorturl.at/GZETb')">
+            <div class="overlay">
+              <p class="label">Support</p>
+              <h3>Request Help Fast</h3>
+            </div>
+          </div>
+          <div class="feature-card" style="background-image: url('https://shorturl.at/L0uPD')">
+            <div class="overlay">
+              <p class="label">Community</p>
+              <h3>Discover Local Projects</h3>
+            </div>
+          </div>
+          <div class="feature-card" style="background-image: url('https://shorturl.at/lGWyf')">
+            <div class="overlay">
+              <p class="label">Verified</p>
+              <h3>Trusted Donors Only</h3>
+            </div>
+          </div>
+          <div class="feature-card" style="background-image: url('https://shorturl.at/HpRhB')">
+            <div class="overlay">
+              <p class="label">Chat</p>
+              <h3>Secure Messaging</h3>
+            </div>
+          </div>
+          <div class="feature-card" style="background-image: url('https://tinyurl.com/ykf9zvxr')">
+            <div class="overlay">
+              <p class="label">Live</p>
+              <h3>Real-Time Updates</h3>
+            </div>
+          </div>
+          <div class="feature-card" style="background-image: url('https://shorturl.at/L0uPD')">
+            <div class="overlay">
+              <p class="label">Community</p>
+              <h3>Discover Local Projects</h3>
+            </div>
+          </div>
+          <div class="feature-cards" id="featureCards">
+            <div class="feature-card" style="background-image: url('https://shorturl.at/GZETb')">
+              <div class="overlay">
+                <p class="label">Support</p>
+                <h3>Request Help Fast</h3>
+              </div>
+            </div>
+            <div class="feature-card" style="background-image: url('https://shorturl.at/HpRhB')">
+              <div class="overlay">
+                <p class="label">Chat</p>
+                <h3>Secure Messaging</h3>
+              </div>
+            </div>
+        </div>
+    
+        <button class="scroll-btn right" aria-label="Scroll right">&#10095;</button>
+      </div>
+      
+    </section>
+    
+    <section class="testimonials">
+      <h2 class="testimonials-heading">What People Are Saying</h2>
+      <div class="testimonials-container">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Sharewell helped me get food and clothes during a tough time. It was fast and easy to ask for help."</p>
+          <span class="author">— Jamal R., Community Member</span>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"I’ve always wanted to give back but didn’t know where to start. Sharewell made it simple."</p>
+          <span class="author">— Sarah K., Donor</span>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"The platform builds real trust. Every project feels personal and local."</p>
+          <span class="author">— Mariam T., Volunteer</span>
+        </div>
+      </div>
+    </section>
+    
+    
+    <footer>
+      
+      <p>What are you waiting for? Get started <a href="register.html" class="footer-link">today</a>.</p>
+    </footer>
+
+    <script type="module" src="/ghod/js/home.js">
+    </script>
+
+
+    
+  </body>
+</html>
