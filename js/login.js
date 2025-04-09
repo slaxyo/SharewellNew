@@ -24,6 +24,6 @@ form?.addEventListener('submit', async (e) => {
     console.error(error)
   } else {
     alert('Login successful!')
-    window.location.href = '/profile/dashboard.html' // or wherever the protected page is
+    window.location.href = 'profile/dashboard.html'
   }
 })
