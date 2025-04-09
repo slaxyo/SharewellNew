@@ -31,6 +31,6 @@ form?.addEventListener('submit', async (e) => {
     console.error(profileError)
   } else {
     alert('Success! Account created.')
-    window.location.href = '/ghod/profile/dashboard.html'
+    window.location.href = '/profile/dashboard.html'
   }
 })
