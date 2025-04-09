@@ -24,6 +24,6 @@ form?.addEventListener('submit', async (e) => {
     console.error(error)
   } else {
     alert('Login successful!')
-    window.location.href = 'profile/dashboard.html'
+    window.location.href = '/workspaces/ghod/js/login.js'
   }
 })
