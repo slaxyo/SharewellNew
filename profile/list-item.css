@@ -1,0 +1,74 @@
+.container {
+    max-width: 600px;
+    margin: 60px auto;
+    background: #121212;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    color: white;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 24px;
+  }
+  
+  form label {
+    display: block;
+    margin: 20px 0 6px;
+    font-weight: 600;
+  }
+  
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 12px;
+    background: #1e1e1e;
+    color: white;
+    border: 1px solid #333;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  
+  form textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  form button {
+    margin-top: 24px;
+    padding: 12px;
+    width: 100%;
+    background: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  form button:hover {
+    background: #eeeeee;
+  }
+  .toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #1f1f1f;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+    pointer-events: none;
+  }
+  
+  .toast.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  

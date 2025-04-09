@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>New Listing – Sharewell</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <link rel="stylesheet" href="list-item.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Create a Listing</h2>
+    <form id="listingForm">
+      <label>Title</label>
+      <input type="text" id="title" placeholder="e.g. Number 2 Pencils" required />
+
+      <label>Image URL</label>
+      <input type="url" id="imageUrl" placeholder="https://example.com/pencil.jpg" required />
+
+      <label>Description</label>
+      <textarea id="description" placeholder="Optional details..."></textarea>
+
+      <label>Price (USD)</label>
+      <input type="number" id="price" placeholder="e.g. 4.99" required />
+
+      <button type="submit">Submit Listing</button>
+    </form>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast">Successfully listed item.</div>
+  <script type="module" src="/ghod/js/dashboard.js"></script>
+  <script type="module" src="/ghod/js/listing.js"></script>
+</body>
+</html>

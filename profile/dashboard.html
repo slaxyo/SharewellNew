@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard – Sharewell</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <div class="sidebar">
+    <div>
+      <h2>Dashboard</h2>
+      <div class="nav-links">
+        <a href="dashboard.html" class="link active">Dashboard</a>
+        <a href="settings.html" class="link">Settings</a>
+        <a href="activity.html" class="link">Activity</a>
+        <a href="#" class="link">Billing</a>   
+        <a href="list-item.html" class="btn btn-secondary form-link" style="margin-right: 115px;">List Item</a>
+      </div>
+    </div>
+ 
+    <a href="/ghod/home.html" class="btn btn-secondary form-link" style="margin-bottom: -42vh;">← Back to Home</a>
+    <button class="logout" id="logoutBtn">Log Out</button>
+  </div>
+
+  <div class="main-content">
+    <div class="section">
+      <h3>Welcome back, <span id="name">...</span></h3>
+      <p>Your username is: <strong><span id="username">loading...</span></strong></p>
+    </div>
+
+    <div class="section">
+      <h3>Recent Activity</h3>
+      <div class="card" id="recent-activity">
+        <!-- activity will go here -->
+      </div>
+    </div>
+    
+
+    <div class="section">
+      <h3>Profile Overview</h3>
+      <div class="card">
+        <p>Account created: <strong><span id="user-date">loading...</span></strong></p>
+        <p>Email: <strong><span id="user-email">loading...</span></strong></p>        
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/ghod/js/dashboard.js">
+  </script>
+</body>
+</html>

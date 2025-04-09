@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Settings – Sharewell</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dashboard.css" />
+  <link rel="stylesheet" href="settings.css" />
+</head>
+<body>
+  <div class="sidebar">
+    <div>
+      <h2>Dashboard</h2>
+      <div class="nav-links">
+        <a href="dashboard.html" class="link">Dashboard</a>
+        <a href="settings.html" class="link active">Settings</a>
+        <a href="activity.html" class="link">Activity</a>
+        <a href="#" class="link">Billing</a>   
+        <a href="list-item.html" class="btn btn-secondary form-link" style="margin-right: 115px;">List Item</a>
+      </div>
+    </div>
+    <a href="/ghod/home.html" class="btn btn-secondary form-link" style="margin-bottom: -42vh;">← Back to Home</a>
+    <button class="logout" id="logoutBtn">Log Out</button>
+  </div>
+  <div class="container">
+    <h1>Account Settings</h1>
+
+    <div class="dashboard-grid">
+      <div class="dashboard-card" id="change-email">Change Email</div>
+      <div class="dashboard-card" id="change-password">Change Password</div>
+      <div class="dashboard-card danger" id="delete-account">Delete Account</div>
+    </div>
+
+    <a href="dashboard.html" class="btn btn-secondary form-link" style="margin-top: 30px;">← Back to Dashboard</a>
+  </div>
+<!-- Change Email Modal -->
+<div class="modal" id="emailModal">
+    <div class="modal-content">
+      <span class="close close-email">&times;</span>
+      <h2>Change Email</h2>
+      <form id="changeEmailForm">
+        <label for="emailplaceholder">New Email:</label>
+        <input type="email" id="newEmail" placeholder="you@example.com" required />
+        <button type="submit">Update Email</button>
+      </form>
+    </div>
+  </div>
+  
+
+  <!-- Password Modal -->
+  <div class="modal" id="passwordModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('passwordModal')">&times;</span>
+      <span class="close" onclick="closeModal('deleteModal')">&times;</span>
+      <button class="btn btn-danger" onclick="handleDelete()">Delete Account</button>
+      
+      <h2>Change Password</h2>
+      <input type="password" id="newPassword" placeholder="New password">
+      <button onclick="handlePasswordChange()">Update</button>
+    </div>
+  </div>
+
+  <!-- Delete Modal -->
+  <div class="modal" id="deleteModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('deleteModal')">&times;</span>
+      <h2>Are you sure?</h2>
+      <p>This will permanently delete your account.</p>
+      <button class="btn btn-danger" onclick="handleDelete()">Delete Account</button>
+    </div>
+  </div>
+
+  
+  
+  <script type="module" src="/ghod/js/settings.js"></script>
+</body>
+</html>
