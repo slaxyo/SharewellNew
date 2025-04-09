@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Discover – Sharewell</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="discover.css" />
+</head>
+<body>
+  <header id="main-header">
+    <div class="tabs-wrapper" id="floating-tabs">
+      <input type="radio" id="tab-home" name="tabs">
+      <label class="tab" for="tab-home" data-target="home.html">Home</label>
+      
+      <input type="radio" id="tab-discover" name="tabs" checked>
+      <label class="tab active" for="tab-discover" data-target="#">Discover</label>         
+  
+      <input type="radio" id="tab-pricing" name="tabs">
+        <label class="tab" for="tab-pricing" data-target="#pricing">Pricing</label>
+  
+      <input type="radio" id="tab-about" name="tabs">
+       <label class="tab" for="tab-about" data-target="#about">About</label>
+  
+      <input type="radio" id="tab-contact" name="tabs">
+        <label class="tab" for="tab-contact" data-target="#contact">Contact</label>
+  
+      <span class="glider"></span>
+    </div>
+  
+    <div class="navbar-container">
+      <a href="#" class="logo">SHAREWELL</a>
+      <a href="login.html" class="btn btn-secondary" id="login-button">Login</a>
+      <a href="profile/dashboard.html" class="btn btn-secondary" id="profile-button" style="display: none;">Profile</a>        
+    </div>
+  </header>
+  <div class="container">
+    <h1>Discover Requests</h1>
+    <div id="discover-grid" class="grid"></div>
+  </div>
+  <script type="module" src="js/discover.js"></script>
+</body>
+</html>

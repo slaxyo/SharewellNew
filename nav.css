@@ -1,0 +1,132 @@
+:root {
+    --purple: rgb(123, 31, 162);
+    --violet: rgb(103, 58, 183);
+    --pink: rgb(244, 143, 177);
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    pointer-events: none;
+    display: flex;
+    padding: 20px 60px;
+    justify-content: center;
+    background: transparent;
+  }
+  
+  .navbar-container {
+    pointer-events: all;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+    padding: 16px 40px;
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  header.hide .navbar-container {
+    transform: translateY(-100%);
+  }
+  
+  header.scrolled .navbar-container {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-20px);
+  }
+  
+  .tabs-wrapper {
+    position: absolute;
+    top: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    padding: 0.5rem 1rem;
+    border-radius: 99px;
+    z-index: 10;
+    transition: all 0.3s ease;
+    pointer-events: auto;
+  }
+  
+  .tabs-wrapper input[type="radio"] {
+    display: none;
+  }
+  
+  .tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 34px;
+    width: 80px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 99px;
+    cursor: pointer;
+    color: #333;
+    z-index: 2;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .glider {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    height: 100%;
+    width: 100px;
+    background-color: #e6eef9;
+    border-radius: 99px;
+    z-index: 1;
+    transition: transform 0.3s ease;
+    pointer-events: none;
+    margin-left: 1px;
+    will-change: transform;
+  }
+  
+  header.scrolled .tabs-wrapper {
+    transform: translateX(-50%);
+    padding: 0.75rem 2rem;
+    background: rgba(255, 255, 255, 0.95);
+  }
+  
+  header.scrolled .tab {
+    font-weight: 600;
+  }
+  
+  header.scrolled .logo,
+  header.scrolled .btn-secondary {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+  }
+  
+  .logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: #070707;
+    text-decoration: none;
+  }
+  
+  .btn-secondary {
+    background: #1f1f1f;
+    color: white;
+    border: 1px solid #333;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .btn-secondary:hover {
+    background: #2a2a2a;
+  }
+  

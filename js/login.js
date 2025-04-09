@@ -24,6 +24,6 @@ form?.addEventListener('submit', async (e) => {
     console.error(error)
   } else {
     alert('Login successful!')
-    window.location.href = '/ghod/js/login.js'
+    window.location.href = '/ghod/login.html'
   }
 })
