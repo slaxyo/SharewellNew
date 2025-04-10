@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     const activeTab = document.querySelector('.tab.active')
     if (activeTab) updateGliderPosition(activeTab)
   })
-  const discoverTab = [...tabs].find(tab => tab.textContent.trim() === 'Discover')
+  const discoverTab = [...tabs].find(tab => tab.textContent.trim() === 'Feed')
   if (discoverTab) {
     discoverTab.classList.add('active')
     updateGliderPosition(discoverTab)

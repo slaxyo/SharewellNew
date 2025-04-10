@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Profile | Sharewell</title>
+  <link rel="stylesheet" href="profile.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+    <a style="text-decoration: none;" href="../home.html"><h1 class="sharewell-title" data-value="SHAREWELL">SHAREWELL</h1></a> 
+          <a href="#" class="nav-link active">Wishlist</a>
+          <a href="#" class="nav-link">Gift Store</a>
+          <a href="#" class="nav-link">Orders</a>
+          <a href="#" class="nav-link">Feed <span class="feed-badge">46</span></a>
+        </div>
+        <div class="navbar-right">
+          <button class="add-gift">+ Add Gift</button>
+          <div class="nav-avatar-wrapper">
+            <img id="nav-avatar" src="/default-avatar.png" alt="Avatar" class="nav-avatar" />
+            <div class="dropdown-menu" id="profile-dropdown">
+              <a href="dashboard.html">My Wishlist</a>
+              <a href="settings.html">Settings</a>
+              <a href="#">Share My Profile</a>
+              <a href="#">Explore Creators</a>
+              <a href="#">Refer Creators</a>
+              <a href="#">Help & Support</a>
+              <button id="logout-Btn">Logout</button>
+            </div>
+          </div>          
+          <i class="fas fa-cog icon"></i>
+          <i class="fas fa-share-alt icon"></i>
+          <i class="fas fa-shopping-cart icon"></i>
+        </div>
+      </nav>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+      
+  <div class="profile-banner" id="banner-container">
+    <img id="banner-image" src="https://placehold.co/1200x240?text=Banner" alt="User Banner" />
+    <input type="file" id="banner-upload" accept="image/*" hidden />
+
+  </div>
+    <button id="change-avatar" class="edit-btn"><span class="chakra-button__icon css-9l50of css-16j93bc"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true" focusable="false" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"></path></svg></span>Edit</button>
+  <div class="profile-header">  <button id="change-banner" class="edit-btn" style="background: none; border: none;"></button>
+    <div class="avatar-wrapper">
+      <img id="avatar" class="avatar" src="https://placehold.co/120x120?text=Avatar" alt="Avatar" />
+      <input type="file" id="avatar-upload" accept="image/*" hidden />
+    
+    </div>
+    <div class="info">
+      <h1 id="display-name">Loading…</h1>
+      <p id="username">@username</p>
+      <p id="bio">Loading bio…</p>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" id="wishlist-tab">Wishlist</button>
+    <button class="tab">Gifters</button>
+  </div>
+  
+<div class="wishlist-container">
+  <div class="wishlist-grid" id="wishlist">
+
+  </div>
+    </div>
+
+<!-- edit modal -->
+<div id="edit-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-top">
+        <h3>Edit Profile Images</h3>
+        <span id="close-modal" class="close-x">&times;</span>
+      </div>
+  
+      <div class="input-group">
+        <label class="modal-label">Avatar</label>
+        <div id="avatar-dropzone" class="dropzone">
+          <p>Drag & drop or click to upload</p>
+          <input type="file" id="modal-avatar-upload" accept="image/*" hidden />
+        </div>
+      </div>
+      
+      <div class="input-group">
+        <label class="modal-label">Banner</label>
+        <div id="banner-dropzone" class="dropzone">
+          <p>Drag & drop or click to upload</p>
+          <input type="file" id="modal-banner-upload" accept="image/*" hidden />
+        </div>
+      </div>
+      
+      <div class="input-group">
+        <label class="modal-label">Bio</label>
+        <textarea id="modal-bio" class="modal-input" rows="3" placeholder="Enter your bio..."></textarea>
+      </div>
+      
+      <div class="modal-actions">
+        <button id="close-modal-btn" class="modal-btn cancel">Close</button>
+        <button id="save-changes" class="modal-btn confirm">Save</button>
+      </div>
+    </div>
+  </div>
+  <!-- wishlist edit modal-->
+  <div id="gift-edit-modal" class="modal">
+  <div class="modal-content">
+    <div class="modal-top">
+      <h3>Edit Gift</h3>
+      <span class="close-x" id="close-edit-modal">&times;</span>
+    </div>
+    <div class="input-group">
+      <label class="modal-label">Gift Title</label>
+      <input type="text" id="edit-title" class="modal-input" />
+    </div>
+    <label class="modal-label">Upload Image</label>
+    <div id="edit-dropzone" class="dropzone">
+      <p>Drag & drop or click to upload</p>
+      <input type="file" id="edit-image-file" accept="image/*" hidden />
+    </div>
+     
+    <div class="input-group">
+      <label class="modal-label">Vendor Name</label>
+      <input type="text" id="edit-vendor" class="modal-input" />
+    </div>
+    <div class="input-group">
+      <label class="modal-label">Price</label>
+      <input type="text" id="edit-price" class="modal-input" />
+    </div>
+    <div class="modal-actions">
+      <button class="modal-btn cancel" id="cancel-edit">Cancel</button>
+      <button class="modal-btn confirm" id="save-edit">Save</button>
+    </div>
+  </div>
+</div>
+  <!-- add gift modal -->
+<div id="add-gift-modal" class="modal">
+  <div class="modal-content">
+    <div class="modal-top">
+      <h3>Add New Gift</h3>
+      <span class="close-x" id="close-add-gift">&times;</span>
+    </div>
+    <form id="add-gift-form">
+      <div class="input-group">
+        <label class="modal-label">Title</label>
+        <input type="text" id="gift-title" class="modal-input" required placeholder=""/>
+      </div>
+      <div class="input-group">
+        <label class="modal-label">Upload Image</label>
+        <div id="dropzone" class="dropzone">
+          <p>Drag & drop or click to upload</p>
+          <input type="file" id="gift-image-file" accept="image/*" hidden />
+        </div>
+      </div>      
+      <div class="input-group">
+        <label class="modal-label">Description</label>
+        <textarea id="gift-description" class="modal-input" rows="3"></textarea>
+      </div>
+      <div class="input-group">
+        <label class="modal-label">Price</label>
+        <input type="number" id="gift-price" class="modal-input" required />
+      </div>
+      <div class="modal-actions">
+        <button type="button" class="modal-btn cancel" id="cancel-add-gift">Cancel</button>
+        <button type="submit" class="modal-btn confirm">Add Gift</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+  <script type="module" src="../js/profile.js"></script>
+  <script src="https://kit.fontawesome.com/d50c71ee26.js" crossorigin="anonymous"></script>
+</body>
+</html>

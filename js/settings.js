@@ -108,4 +108,7 @@ function closeModal(id) {
       }
     })
   })
-  
+  document.getElementById('logoutBtn')?.addEventListener('click', async () => {
+    await supabase.auth.signOut()
+    window.location.href = '/ghod/login.html'
+  })
